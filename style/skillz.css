@@ -1,0 +1,77 @@
+body {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ); 
+    
+    
+
+}
+
+
+
+#mountingId {
+    border: 5px solid rgb(76, 45, 83);
+    border-radius: 5%;
+    height: 700px;
+    width: 700px;
+    position: relative;
+    margin-top: 100px;
+    margin-right: 50px; 
+    margin-left: -100px;
+    background-color: rgb(139, 84, 153);
+
+}
+
+progress {
+    margin-top: 20px;
+    margin-left: 225px;
+}
+
+#lvlOne1stResult {
+    text-align: center;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: purple;
+}
+
+h2 {
+    text-align: center;
+    font-size: 45px;
+    color: purple;
+}
+
+table, tr, td {
+    border: 1px solid black;
+    border-style: hidden;
+    height: 75px;
+    width: 400px;
+    margin-top: 75px;
+    margin-left: 50px;
+}
+
+#ascendingArrayTable, tr, td {
+    text-align: center;
+    
+}
+
+button {
+    height: 70px;
+    width: 70px;
+    background-color: rgb(245, 205, 255);
+    border-style: none;
+    border-collapse: collapse;
+}
+
+#ascendingArrayTable, button {
+    height: 70px;
+    width: 95px;
+    border-style: none;
+    border-collapse: collapse;
+
+}
