@@ -1,41 +1,41 @@
-var listOfQuestions = ['Porodicno uredjenje kada zena ima vise muzeva?',
-                       'Porodicno uredjenje kada muskarac ima vise zena?',
-                       'Kako se prenosi rec bratstbo kada se nalazi na kraju reda?',
-                       'Koja je druga najveca parija u Nemackoj?',
-                       'Sta od navedenog nije hartija od vrednosti?',
+var listOfQuestions = ['Porodično uređenje kada žena ima vise muževa?',
+                       'Porodično uređenje kada muškarac ima vise žena?',
+                       'Kako se prenosi reč bratstbo kada se nalazi na kraju reda?',
+                       'Koja je druga najveća partija u Nemačkoj?',
+                       'Šta od navedenog nije hartija od vrednosti?',
                        'Na kom poluostrvu se nalazi Italija?',
-                       'Kostana srz proizvodi?',
+                       'Koštana srž proizvodi?',
                        'U kojoj bajci se spominje vreteno?',
                        'Perfidna osoba je?',
-                       'U sastavu koje zemlje se nalayila Finska u XVIII veku?',
-                       'Kada je neki slucaj AD ACTA to znaci da je?',
-                       'Koji od datih procesa pretstavlja fizicku promenu?',
+                       'U sastavu koje zemlje se nalazila Finska u XVIII veku?',
+                       'Kada je neki slučaj AD ACTA to znači da je?',
+                       'Koji od datih procesa pretstavlja fizičku promenu?',
                        'Ahilova peta je simbol za?',
                        'Agnostik je?',
-                       'Ko je rezirao film Let iznad kukavicjeg gnezda?',
-                       'Koja je najmanja planeta Suncevog sistema?',
-                       'Koje mediteransko ostrvo je izvor sukoba Grcke i Turske?',
-                       'Koji organ u Ljudskom organizmu preciscava krv?',
-                       'Ko je osnivac visokoskolskog obrazovanja u Srbiji?',
+                       'Ko je režirao film Let iznad kukavičjeg gnezda?',
+                       'Koja je najmanja planeta Sunčevog sistema?',
+                       'Koje mediteransko ostrvo je izvor sukoba Grčke i Turske?',
+                       'Koji organ u ljudskom organizmu prečišćava krv?',
+                       'Ko je osnivač visokoškolskog obrazovanja u Srbiji?',
                        'Do kog poena se igra peti set u odbojci?',
-                       'Kad kazemo Veciti grad mislimo na?',
-                       'Koja figura je najaca u sahu?',
-                       'Ko je bio na celu Drugog srpskog ustanka?',
-                       'Koja boja se dobije mesanjem crvene i plave?',
+                       'Kad kažemo Večiti grad mislimo na?',
+                       'Koja figura je najača u šahu?',
+                       'Ko je bio na čelu Drugog srpskog ustanka?',
+                       'Koja boja se dobije mešanjem crvene i plave?',
                        'Konstantinopolj je stari naziv za?',
-                       'Oskar Kokoska je?',
-                       'Koja zivotinja je zastitni znak Linux operativnog sistema?',
-                       'Ko je bio svedok Isusovog preobrazenja?',
+                       'Oskar Kokoška je?',
+                       'Koja životinja je zaštitni znak Linux operativnog sistema?',
+                       'Ko je bio svedok Isusovog preobraženja?',
                        'Crkva Santa Maria della Salute nalazi se u?',
-                       'Ko se smatrao zacetnikom Renesanse u slikarstvu?',
-                       'Prema narodnom verovanju onaj ko zna nemusti jezik razume?',
-                       'Zena sa povezom oko ociju i vagom u ruci je simbol?',
-                       'Sta je oboa?',
-                       'Koji je najveci most u Evropi?',
-                       'U kom gradu se nalazi sediste Ujedinjenih nacija?',
-                       'U grckoj mitologiji Artemida je bila boginja?',
-                       'Kako se naziva neformalni govor jedne drustvene grupe?',
-                       'Koja je vrednost broja PI?',
+                       'Ko se smatrao začetnikom Renesanse u slikarstvu?',
+                       'Prema narodnom verovanju onaj ko zna nemušti jezik razume?',
+                       'Žena sa povezom oko očiju i vagom u ruci je simbol?',
+                       'Šta je oboa?',
+                       'Koji je najveći most u Evropi?',
+                       'U kom gradu se nalazi sedište Ujedinjenih nacija?',
+                       'U grčkoj mitologiji Artemida je bila boginja?',
+                       'Kako se naziva neformalni govor jedne društvene grupe?',
+                       'Koja je vrednost broja Pi?',
                        'Oziris je u egipatskoj mitologiji bio Bog?',
                        'Koji stari narod je uveo nulu?',
                        'Mesing je legura?'];
@@ -45,40 +45,40 @@ var listOfAnswers = ['Poliandrija/Poligamija/Monogamija',
                      'Socijaldemokrate/Liberali/Naprednjaci',
                      'Platne kartice/Menice/Deonice',
                      'Apeninskom/Pirinejskom/Balkanskom',
-                     'Krvna zrnca/Hormone/Nervne celije',
-                     'Uspavana Lepotica/Pepeljuga/Snezana i sedam patuljaka',
-                     'Podmukla/Prefrigana/Proracunata',
-                     'Svedske/Rusije/Danske',
-                     'Okoncan/Odlozen/Zakazan',
+                     'Krvna zrnca/Hormone/Nervne ćelije',
+                     'Uspavana Lepotica/Pepeljuga/Lepotica i zver',
+                     'Podmukla/Prefrigana/Proračunata',
+                     'Švedske/Rusije/Danske',
+                     'Okončan/Odložen/Zakazan',
                      'Dehidratacija/Fermentacija/Hidroliza',
                      'Ranjivost/Sporost/Tromost',
-                     'Skeptik/Nevernik/Lakomislen covek',
-                     'Milos Forman/Stiven Spilberg/Kventin Tarantino',
+                     'Skeptik/Nevernik/Lakomislen čovek',
+                     'Miloš Forman/Stiven Spilberg/Kventin Tarantino',
                      'Pluton/Venera/Neptun',
                      'Kipar/Krit/Rodos',
-                     'Bubrezi/Jetra/Pluca',
-                     'Dositej/Sterija/Nusic',
+                     'Bubrezi/Jetra/Pluća',
+                     'Dositej/Sterija/Nusić',
                      '15-og/20-og/25-og',
                      'Rim/Pariz/London',
                      'Kralj/Kraljica/Lovac',
-                     'Milos Obrenovic/Stanoje Glavas/Karadjordje',
-                     'Ljubicasta/Narandzasta/Zelena',
+                     'Miloš Obrenović/Stanoje Glavaš/Karađorđe',
+                     'Ljubičasta/Narandžasta/Zelena',
                      'Istambul/Atina/Ankara',
                      'Slikar/Pesnik/Filozof',
                      'Foka/Pingvin/Pas',
                      'Jakov,Petar,Jovan/Petar,Pavle/Svi apostoli',
                      'Veneciji/Firenci/Rimu',
-                     'Da Vinci/Mikelandjelo/Djoto',
-                     'Zivotinje/Pleme Bahua/Staroslovenski jezik',
+                     'Da Vinči/Mikelanđelo/Đoto',
+                     'Životinje/Pleme Bahua/Staroslovenski jezik',
                      'Pravde/Borbe/Mudrosti',
-                     'Duvacki instrument/Reka/Oblast u Meksiku?',
+                     'Duvački instrument/Reka/Oblast u Meksiku?',
                      'Vasko da Gama/Bosforski most/Most 25. april',
                      'Njujork/Brisel/Pariz',
                      'Lova/Mudrosti/Nauke',
-                     'Zargon/Likalitet/Dijalekt',
+                     'Žargon/Lokalitet/Dijalekt',
                      '3,14/0,14/1',
                      'Podzemlja/Sunca/Mora',
-                     'Indijci/Egipcani/Arapi?',
+                     'Indijci/Egipcani/Arapi',
                      'Bakra i cinka/Kalaja i bakra/Aluminijuma i cinka'];
 var correctAnswer = '';
 var QACount = 0;
@@ -124,7 +124,7 @@ function fourthLevelTest(event) {
         //resultCount = 0;
         if (!alert('You made mistake')) {
             QACount = 0;
-            document.location.reload() = "../view/level-five-first.html";
+            document.location.reload();
         }
     }
 
@@ -132,7 +132,7 @@ function fourthLevelTest(event) {
     if (QACount == 5) {
         calculateResult('lvlFiveResult');
         if (!alert('You successfully pass this level. Score: ' + localStorage.getItem('lvlFiveResult'))) {
-            document.location = "../view/secondLevelThirdPage.html";
+            document.location = "../view/index.html";
         }
     } else {
         //ukoliko je pogodjen tacan rezultat ali nije 5 po redu generisi view za sledeci korak racunanja
@@ -140,14 +140,14 @@ function fourthLevelTest(event) {
     }
 }
 
-var timeleft = 15;
+var timeleft = 18;
 var downloadTimer = setInterval(function () {
     timeleft--;
-    document.getElementById("progressBar").value = 15 - timeleft;
+    document.getElementById("progressBar").value = 18 - timeleft;
     if (timeleft <= 0) {
         if (!alert('Time is up! Play again')) {
             QACount = 0;
-            document.location.reload() = "../view/level-five-first.html";
+            document.location.reload();
             clearInterval(downloadTimer);
         }
     }
@@ -155,7 +155,7 @@ var downloadTimer = setInterval(function () {
 }, 1000);
 
 function calculateResult(levelId) {
-    if(timeleft <= 15 && timeleft >= 12) {
+    if(timeleft <= 18 && timeleft >= 12) {
         localStorage.setItem(levelId, 5);
     } else if(timeleft < 12 && timeleft >= 9) {
         localStorage.setItem(levelId, 4);

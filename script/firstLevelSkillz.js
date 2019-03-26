@@ -3,12 +3,12 @@
 function firstLevelTable() {
 
     if (document.getElementById("lvlOne1stResult") != null) {
-        document.getElementById("lvlOne1stResult").innerHTML = localStorage.getItem('lvlOne1stResult');
+        document.getElementById("lvlOne1stResult").innerHTML = localStorage.getItem('lvlOne1stResult') + '/5';
     }
 
     var tableValues = ["8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8",
         "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "8", "&", "8", "8", "8", "8"];
-    tableValues = shuffle(tableValues);
+    tableValues = shuffle(tableValues); // Funkcija za kreiranja random elemenata liste
 
     var html = '<table id="sahTabla">';
     for (var i = 0; i < tableValues.length; i++) {
@@ -36,6 +36,10 @@ function fLTest(event) {
         if (!alert('You successfully pass this level. Score: ' + localStorage.getItem('lvlOne1stResult'))) {
             document.location = "../view/level-one-second.html";
         }
+    } else {
+        if (!alert('You made mistake')) {
+            document.location.reload();
+        }
     }
 }
 // First Sublevel //
@@ -43,7 +47,7 @@ function fLTest(event) {
 function firstSubLevelTable() {
 
     if (document.getElementById("lvlOne2ndResult") != null) {
-        document.getElementById("lvlOne2ndResult").innerHTML = localStorage.getItem('lvlOne2ndResult');
+        document.getElementById("lvlOne2ndResult").innerHTML = localStorage.getItem('lvlOne2ndResult') + '/5';
     }
 
     var tableValues = ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X",
@@ -76,6 +80,10 @@ function subLTest(event) {
         if (!alert('You successfully pass this level. Score: ' + localStorage.getItem('lvlOne2ndResult'))) {
             document.location = "../view/level-one-third.html";
         }
+    } else {
+        if (!alert('You made mistake')) {
+            document.location.reload();
+        }
     }
 }
 
@@ -84,7 +92,7 @@ function subLTest(event) {
 function secondSubLevelTable() {
 
     if (document.getElementById("lvlOne3rdResult") != null) {
-        document.getElementById("lvlOne3rdResult").innerHTML = localStorage.getItem('lvlOne3rdResult');
+        document.getElementById("lvlOne3rdResult").innerHTML = localStorage.getItem('lvlOne3rdResult') + '/5';
     }
 
     var tableValues = ["p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p", "p",
@@ -115,36 +123,43 @@ function secSubLTest(event) {
     if (event.innerText == "q") {
         calculateResult('lvlOne3rdResult');
         if (!alert('You successfully pass this level. Score: ' + localStorage.getItem('lvlOne3rdResult'))) {
-            document.location = "../view/greeting.html";
+            document.location = "../view/level-one-index.html";
+        }
+    } else {
+        if (!alert('You made mistake')) {
+            document.location.reload();
         }
     }
 }
+
 
 var timeleft = 15;
 var downloadTimer = setInterval(function () {
-    timeleft--;
-    document.getElementById("progressBar").value = 15 - timeleft;
-    if (timeleft <= 0) {
-        if (!alert('Time is up! Play again')) {
-            QACount = 0;
-            document.location = "../view/level-one-first.html";
-            clearInterval(downloadTimer);
+    if (document.getElementById("progressBar") != null) {
+        timeleft--;
+        document.getElementById("progressBar").value = 15 - timeleft;
+        if (timeleft <= 0) {
+            if (!alert('Time is up! Play again')) {
+                QACount = 0;
+                document.location = "../view/level-one-first.html";
+                clearInterval(downloadTimer);
+            }
         }
     }
-
 }, 1000);
 
+// setTimeout(function(){ alert("Hello"); }, 3000);
+
 function calculateResult(levelId) {
-    if(timeleft <= 15 && timeleft >= 12) {
+    if (timeleft <= 15 && timeleft >= 12) {
         localStorage.setItem(levelId, 5);
-    } else if(timeleft < 12 && timeleft >= 9) {
+    } else if (timeleft < 12 && timeleft >= 9) {
         localStorage.setItem(levelId, 4);
-    } else if(timeleft < 9 && timeleft >= 6) {
+    } else if (timeleft < 9 && timeleft >= 6) {
         localStorage.setItem(levelId, 3);
-    } else if(timeleft < 6 && timeleft >= 3) {
+    } else if (timeleft < 6 && timeleft >= 3) {
         localStorage.setItem(levelId, 2);
-    } else if(timeleft < 3) {
+    } else if (timeleft < 3) {
         localStorage.setItem(levelId, 1);
     }
 }
-

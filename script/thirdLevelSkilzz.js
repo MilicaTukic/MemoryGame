@@ -5,7 +5,7 @@ var defaultFLPath = './../memoryFLImages/';
 var defaultPath = './../memoryImages/';
 var defaultIcon = 'question-mark.png';
 
-var tableFLValues = [ defaultFLPath + 'air-freight.png',
+var tableFLValues = [defaultFLPath + 'air-freight.png',
 defaultFLPath + 'air-freight.png',
 defaultFLPath + 'camera.png',
 defaultFLPath + 'camera.png',
@@ -48,6 +48,11 @@ defaultPath + 'india-mnm.png',
 defaultPath + 'india-flg.png'];
 
 function generateThirdLvlView() {
+
+    if (document.getElementById("lvlThree1stResult") != null) {
+        document.getElementById("lvlThree1stResult").innerHTML = localStorage.getItem('lvlThree1stResult') + '/5';
+    }
+
     tableFLValues = shuffle(tableFLValues);
 
     var html = '<table>';
@@ -57,7 +62,7 @@ function generateThirdLvlView() {
         }
         html += `<td><input id='${i}' type='image' src='${defaultPath + defaultIcon}' onclick='thirdLevelFPageTest(this);' /></td>`;
 
-        if (i % 4 == 3) {
+        if (i % 4 == 3) { // Dijeljenje po modulu
 
             html += "</tr>";
         }
@@ -92,7 +97,7 @@ function thirdLevelFPageTest(event) {
             document.getElementById(firstSelectedImageId).setAttribute("disabled", "disabled");
             document.getElementById(secondSelectedImageId).setAttribute("disabled", "disabled");
             resultCounter++;
-            if(resultCounter == 10) {
+            if (resultCounter == 10) {
                 calculateResult('lvlThree1stResult');
                 if (!alert('You successfully pass this level. Score: ' + localStorage.getItem('lvlThree1stResult'))) {
                     document.location = "../view/level-three-second.html";
@@ -114,6 +119,11 @@ function thirdLevelFPageTest(event) {
 }
 
 function thirdLevelPageTable() {
+
+    if (document.getElementById("lvlThree2ndResult") != null) {
+        document.getElementById("lvlThree2ndResult").innerHTML = localStorage.getItem('lvlThree2ndResult') + '/5';
+    }
+
     tableValues = shuffle(tableValues);
 
     var html = '<table>';
@@ -155,10 +165,10 @@ function thirdLevelPageTest(event) {
             document.getElementById(firstSelectedImageId).setAttribute("disabled", "disabled");
             document.getElementById(secondSelectedImageId).setAttribute("disabled", "disabled");
             resultCounter++;
-            if(resultCounter == 10) {
+            if (resultCounter == 10) {
                 calculateResult('lvlThree2ndResult');
                 if (!alert('You successfully pass this level. Score: ' + localStorage.getItem('lvlThree2ndResult'))) {
-                    document.location = "../view/level-four-first.html";
+                    document.location = "../view/level-three-index.html";
                 }
             }
         } else {
@@ -167,7 +177,6 @@ function thirdLevelPageTest(event) {
                 document.getElementById(secondSelectedImageId).src = defaultPath + defaultIcon;
             }, 1000);
         }
-
 
         firstSelectedImage = "";
         firstSelectedImageId;
@@ -178,28 +187,29 @@ function thirdLevelPageTest(event) {
 
 var timeleft = 90;
 var downloadTimer = setInterval(function () {
-    timeleft--;
-    document.getElementById("progressBar").value = 90 - timeleft;
-    if (timeleft <= 0) {
-        if (!alert('Time is up! Play again')) {
-            QACount = 0;
-            document.location = "../view/level-three-first.html";
-            clearInterval(downloadTimer);
+    if (document.getElementById("progressBar") != null) {
+        timeleft--;
+        document.getElementById("progressBar").value = 90 - timeleft;
+        if (timeleft <= 0) {
+            if (!alert('Time is up! Play again')) {
+                QACount = 0;
+                document.location = "../view/level-three-first.html";
+                clearInterval(downloadTimer);
+            }
         }
     }
-
 }, 1000);
 
 function calculateResult(levelId) {
-    if(timeleft <= 90 && timeleft >= 70) {
+    if (timeleft <= 90 && timeleft >= 70) {
         localStorage.setItem(levelId, 5);
-    } else if(timeleft < 70 && timeleft >= 45) {
+    } else if (timeleft < 70 && timeleft >= 45) {
         localStorage.setItem(levelId, 4);
-    } else if(timeleft < 45 && timeleft >= 25) {
+    } else if (timeleft < 45 && timeleft >= 25) {
         localStorage.setItem(levelId, 3);
-    } else if(timeleft < 25 && timeleft >= 7) {
+    } else if (timeleft < 25 && timeleft >= 7) {
         localStorage.setItem(levelId, 2);
-    } else if(timeleft < 7) {
+    } else if (timeleft < 7) {
         localStorage.setItem(levelId, 1);
     }
 }

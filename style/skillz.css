@@ -2,70 +2,84 @@ body {
     width: 500px;
     height: 500px;
     margin: auto;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ); 
-    
-    
-
+    /* background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url(./../images/bodyBackgroundImg8.jpg) no-repeat center center fixed; */
+    background-size: cover;
 }
 
-
-
-#mountingId {
+.table-border {
     border: 5px solid rgb(76, 45, 83);
-    border-radius: 5%;
     height: 700px;
     width: 700px;
     position: relative;
-    margin-top: 100px;
+    margin-top: 85px;
     margin-right: 50px; 
-    margin-left: -100px;
+    margin-left: -150px;
     background-color: rgb(139, 84, 153);
-
 }
 
 progress {
+    width: 100%;
     margin-top: 20px;
-    margin-left: 225px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:whiteSmoke !important;
 }
 
-#lvlOne1stResult {
+progress[value]::-webkit-progress-value {
+    background-image:
+        -webkit-linear-gradient(-45deg, 
+                                transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                                rgba(0,0, 0, .1) 66%, transparent 66%),
+        -webkit-linear-gradient(top, 
+                                rgba(255, 255, 255, .25), 
+                                rgba(0, 0, 0, .25)),
+        -webkit-linear-gradient(left, rgb(245, 205, 255), rgb(250, 250, 250));
+
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+.level-text-align {
     text-align: center;
 }
-
-
 
 h1 {
     text-align: center;
     font-size: 50px;
-    color: purple;
+    color: greenyellow;
 }
 
 h2 {
     text-align: center;
     font-size: 45px;
-    color: purple;
+    color: blue;
 }
 
 table, tr, td {
+    table-layout: fixed;
     border: 1px solid black;
     border-style: hidden;
     height: 75px;
     width: 400px;
-    margin-top: 75px;
-    margin-left: 50px;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 #ascendingArrayTable, tr, td {
     text-align: center;
-    
+    width: 30px;
 }
 
 button {
-    height: 70px;
-    width: 70px;
+    height: 100px;
+    width: 150px;
     background-color: rgb(245, 205, 255);
-    border-style: none;
+    border:  blue;
     border-collapse: collapse;
+    outline-style: none;
+    /* margin-left: 200px; */
 }
 
 #ascendingArrayTable, button {
@@ -73,5 +87,50 @@ button {
     width: 95px;
     border-style: none;
     border-collapse: collapse;
+}
 
+#memoryGameFLTable {
+    margin-right: 50px;
+}
+
+#question {
+    text-align: center;
+    font-size: x-large;
+    margin-top: 50px;
+}
+
+#givenAnswers {
+    text-align: center;
+    font-size: large;
+    height: 150px;
+    width: 100%;
+    margin-top: 30px;
+    /* margin-right: 75px; */
+    /* margin-left: 75px; */
+}
+
+#givenAnswers button {
+    display: inline-block;
+    border: 1px solid blue;
+    height: 100px;
+    width: 150px;
+    vertical-align: baseline;
+    word-break: break-all;
+}
+
+.menu-item-button {
+    width: 90%;
+    height: 35px;
+}
+
+.level-four-btn-result {
+    position: relative;
+    left: 25%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.level-four-num-pos {
+    margin-top: 100px;
 }

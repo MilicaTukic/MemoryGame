@@ -107,7 +107,7 @@ var downloadTimer = setInterval(function () {
     if (timeleft <= 0) {
         if (!alert('Time is up! Play again')) {
             QACount = 0;
-            document.location.reload() = "../view/level-four-first.html";
+            document.location.reload();
             clearInterval(downloadTimer);
         }
     }
